@@ -6,29 +6,5 @@ import { UsersService } from './shared/users.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  // activeUsers = ['Max', 'Anna'];
-  // inactiveUsers = ['Chris', 'Manu'];
-  activeUsers = [];
-  inactiveUsers = [];
-
-  constructor(private usersService: UsersService) { }
-
-  ngOnInit() {
-    this.activeUsers = this.usersService.activeUsers;
-    this.inactiveUsers = this.usersService.inactiveUsers;
-  }
-
-  onSetToInactive(id: number) {
-
-  //  this.inactiveUsers.push(this.activeUsers[id]);
-  //  this.activeUsers.splice(id, 1);
-    this.usersService.setToInactive(id);
-  }
-
-  onSetToActive(id: number) {
-  //  this.activeUsers.push(this.inactiveUsers[id]);
-  //  this.inactiveUsers.splice(id, 1);
-    this.usersService.setToActive(id);
-  }
+export class AppComponent {
 }
